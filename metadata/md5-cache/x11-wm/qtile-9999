@@ -1,0 +1,16 @@
+BDEPEND=python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?,python_targets_python3_10(-)?] test? ( x11-base/xorg-server[xvfb] x11-apps/xhost ) >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=x11-libs/cairo[X,xcb(+)] x11-libs/pango dev-python/setuptools[python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/setuptools_scm[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-python/cairocffi-0.9.0[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-python/cffi-1.1.0:=[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-python/xcffib-0.8.1:=[python_targets_python3_9(-)?,python_targets_python3_10(-)?] wayland? ( dev-python/pywlroots[python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) test? ( dev-python/pytest[python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/pytest-cov[python_targets_python3_9(-)?,python_targets_python3_10(-)?] x11-base/xorg-server[xvfb,xephyr] x11-apps/xeyes x11-apps/xcalc x11-apps/xclock x11-terms/xterm )
+DESCRIPTION=A full-featured, hackable tiling window manager written in Python
+EAPI=8
+HOMEPAGE=http://qtile.org/
+INHERIT=distutils-r1 virtualx git-r3
+IUSE=test +wayland python_targets_python3_9 python_targets_python3_10 test
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=x11-libs/cairo[X,xcb(+)] x11-libs/pango dev-python/setuptools[python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/setuptools_scm[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-python/cairocffi-0.9.0[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-python/cffi-1.1.0:=[python_targets_python3_9(-)?,python_targets_python3_10(-)?] >=dev-python/xcffib-0.8.1:=[python_targets_python3_9(-)?,python_targets_python3_10(-)?] wayland? ( dev-python/pywlroots[python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) python_targets_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_targets_python3_10? ( >=dev-lang/python-3.10.4:3.10 ) >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)?,python_targets_python3_10(-)?]
+REQUIRED_USE=|| ( python_targets_python3_9 python_targets_python3_10 )
+RESTRICT=test !test? ( test )
+SLOT=0
+_eclasses_=multibuild	d26d81f242cb193d899a72bca423d0bd	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	python-utils-r1	b9fc5e97e886514e5132f50465185401	python-r1	2d51fd03931e743811ce30d198e4dcfd	distutils-r1	e3b0f72d558eb613ff83262d22cbf887	virtualx	644887c82aefdf12001489391fca4f02	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=35ec08cfd1936821b370194e465d6611
