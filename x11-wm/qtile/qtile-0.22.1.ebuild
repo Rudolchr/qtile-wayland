@@ -16,7 +16,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~riscv ~x86"
 
-IUSE="wayland"
+IUSE="wayland psutil"
 
 RDEPEND=">=dev-python/cairocffi-0.9.0[${PYTHON_USEDEP}]
 	>=dev-python/cffi-1.1.0[${PYTHON_USEDEP}]
@@ -32,6 +32,9 @@ RDEPEND=">=dev-python/cairocffi-0.9.0[${PYTHON_USEDEP}]
 	x11-libs/pango
 	wayland? (
 		>=dev-python/pywlroots-0.15.22[${PYTHON_USEDEP}]
+	)
+	psutil? (
+		dev-python/psutil
 	)"
 BDEPEND="
 	test? (

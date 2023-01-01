@@ -5,6 +5,9 @@
 		<email>zlogene@gentoo.org</email>
 		<name>Mikle Kolyada</name>
 	</maintainer>
+	<use>
+		<flag name="psutil">Enable psutil support for CPU widget</flag>
+	</use>
 	<upstream>
 		<remote-id type="github">qtile/qtile</remote-id>
 		<remote-id type="pypi">qtile</remote-id>
